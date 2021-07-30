@@ -13,15 +13,14 @@ code {
 }
 
 .app {
-  margin-left: 10vh;
-  margin-top: 10vh;
-  flex: 1;
-  flex-direction: row;
+  margin-left: 5vh;
+  margin-top: 5vh;
+  background-color: white;
 }
 
 .poster {
   height: 200px;
-  width: 100%;
+  width: auto;
   border-radius: 3.5%;
 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
@@ -49,6 +48,7 @@ code {
   align-content: center;
   justify-items: center;
   font-weight: 200;
+  z-index: 1;
 }
 
 .search__input {
@@ -101,7 +101,7 @@ code {
   font-size: 25px;
   font-weight: 200;
   letter-spacing: 1px;
-  padding: 13px 50px 13px;
+  padding: 10px 40px 10px;
   outline: 0;
   border: 1px solid black;
   cursor: pointer;
@@ -126,4 +126,52 @@ code {
 .fill:hover::after {
   top: 0px;
   left: 0px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.modal-main {
+  position: absolute;
+  background: white;
+  width: 425px;
+  /* height: auto; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  padding: 20px;
+  flex: 1;
+  flex-direction: row;
+  /* filter: blur(4px);
+  -webkit-filter: blur(4px);
+  transition: 1s filter linear;
+  -webkit-transition: 1s -webkit-filter linear;
+  -moz-transition: 1s -moz-filter linear;
+  -ms-transition: 1s -ms-filter linear;
+  -o-transition: 1s -o-filter linear; */
+}
+/* 
+.modal-main.is-appear {
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+} */
+
+.modal.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+h2.movieDetails {
+  color: #d25539;
 }
